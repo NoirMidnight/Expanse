@@ -2,7 +2,9 @@ package net.noirmidnight.expanse;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.CreativeModeTabRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -14,6 +16,9 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.noirmidnight.expanse.block.ModBlocks;
+import net.noirmidnight.expanse.item.ModCreativeModeTabs;
+import net.noirmidnight.expanse.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -29,6 +34,11 @@ public class ExpanseMod
     public ExpanseMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -49,9 +59,18 @@ public class ExpanseMod
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.MALACHITE);
+            event.accept(ModItems.MALACHITE_INGOT);
+            event.accept(ModItems.MALACHITE_NUGGET);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.MALACHITE_BLOCK);
+            event.accept(ModBlocks.DEEPSLATE_MALACHITE_ORE);
+            event.accept(ModBlocks.MALACHITE_ORE);
+            event.accept(ModBlocks.RAW_MALACHITE_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

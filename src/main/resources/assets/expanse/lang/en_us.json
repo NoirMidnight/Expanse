@@ -1,0 +1,12 @@
+{
+  "creativetab.expanse": "Expanse",
+
+  "item.expanse.malachite": "Raw Malachite",
+  "item.expanse.malachite_ingot": "Malachite Ingot",
+  "item.expanse.malachite_nugget": "Malachite Nugget",
+
+  "block.expanse.malachite_block": "Malachite Block",
+  "block.expanse.deepslate_malachite_ore": "Deepslate Malachite Ore",
+  "block.expanse.malachite_ore": "Malachite Ore",
+  "block.expanse.raw_malachite_block": "Raw Malachite Block"
+}
