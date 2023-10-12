@@ -64,12 +64,19 @@ public class ExpanseMod
             event.accept(ModItems.MALACHITE);
             event.accept(ModItems.MALACHITE_INGOT);
             event.accept(ModItems.MALACHITE_NUGGET);
+            event.accept(ModItems.LARGE_RUBY);
+            event.accept(ModItems.SMALL_RUBY);
+            event.accept(ModItems.RUBY_INGOT);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.MALACHITE_BLOCK);
             event.accept(ModBlocks.DEEPSLATE_MALACHITE_ORE);
             event.accept(ModBlocks.MALACHITE_ORE);
             event.accept(ModBlocks.RAW_MALACHITE_BLOCK);
+            event.accept(ModBlocks.RUBY_BLOCK);
+            event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
+            event.accept(ModBlocks.RUBY_ORE);
+            event.accept(ModBlocks.RAW_RUBY_BLOCK);
         }
     }
 

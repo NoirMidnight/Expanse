@@ -8,5 +8,14 @@
   "block.expanse.malachite_block": "Malachite Block",
   "block.expanse.deepslate_malachite_ore": "Deepslate Malachite Ore",
   "block.expanse.malachite_ore": "Malachite Ore",
-  "block.expanse.raw_malachite_block": "Raw Malachite Block"
+  "block.expanse.raw_malachite_block": "Raw Malachite Block",
+
+  "item.expanse.large_ruby": "Ruby",
+  "item.expanse.small_ruby": "Small Ruby",
+  "item.expanse.ruby_ingot": "Ruby Ingot",
+
+  "block.expanse.ruby_block": "Ruby Block",
+  "block.expanse.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.expanse.ruby_ore": "Ruby Ore",
+  "block.expanse.raw_ruby_block": "Raw Ruby Block"
 }

@@ -26,6 +26,15 @@ public static final RegistryObject<CreativeModeTab> EXPANSE = CREATIVE_MODE_TABS
                     output.accept(ModBlocks.RAW_MALACHITE_BLOCK.get());
                     output.accept(ModBlocks.MALACHITE_BLOCK.get());
 
+                    output.accept(ModItems.LARGE_RUBY.get());
+                    output.accept(ModItems.SMALL_RUBY.get());
+                    output.accept(ModItems.RUBY_INGOT.get());
+
+                    output.accept(ModBlocks.RUBY_ORE.get());
+                    output.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
+                    output.accept(ModBlocks.RAW_RUBY_BLOCK.get());
+                    output.accept(ModBlocks.RUBY_BLOCK.get());
+
                 }).build());
 
     public static void register(IEventBus eventBus) {

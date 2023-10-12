@@ -19,6 +19,13 @@ public class ModItems {
     public static final RegistryObject<Item> MALACHITE_NUGGET = ITEMS.register("malachite_nugget",
             () -> new Item(new Item.Properties()));
 
+    // Ruby
+    public static final RegistryObject<Item> LARGE_RUBY = ITEMS.register("large_ruby",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SMALL_RUBY = ITEMS.register("small_ruby",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RUBY_INGOT = ITEMS.register("ruby_ingot",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

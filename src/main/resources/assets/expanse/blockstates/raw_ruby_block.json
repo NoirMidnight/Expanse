@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "expanse:block/raw_ruby_block"
+    }
+  }
+}
